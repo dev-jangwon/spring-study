@@ -44,6 +44,9 @@ public class BookController {
 	@ResponseStatus(HttpStatus.CREATED)
 	Book create(@RequestBody Book book) {
 		Book newBook = service.create(book);
+		// Spring Boot에서는 Sl4j 와 Logback이 default 로깅 인터페이스 / 구현 프레임워크로 제공된다.
+		// spring-framework에서는 내부적으로 Apache Commons Logging을 사용하고 있다.
+		// 때문에 spring-framework을 사용하는 어플리케이션에서 SLF4J를 사용하고자한다면 로깅 프레임워크의 의존 관계를 조정해야 한다.
 		log.info("book created : {}" , newBook);
 		return service.create(newBook);
 	}

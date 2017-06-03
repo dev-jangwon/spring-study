@@ -15,8 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import kr.or.jangwon.domain.Book;
 
-
-
+// ApplicationConxtext를 로딩한다.
+// Transcational을 붙여 테스트 실행 중에 이루어진 DB 조작을 트랜잭션 단위로 취소한다.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
