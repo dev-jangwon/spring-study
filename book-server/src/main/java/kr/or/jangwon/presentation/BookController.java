@@ -19,6 +19,9 @@ import kr.or.jangwon.service.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// Spring MVC: Spring framework의 모듈로 HTTP 요청을 받고 응답을 보내는 웹 레이어를 담당합니다.
+// Spring Boot 환경에서 Spring MVC의 어노테이션을 이용해서 REST API를 합니다.
+// Spring 어플리케이션에서는 @Controller가 붙은 클래스 -> @Service가 붙은 클래스 -> @Repository가 붙은 클래스로 요청의 흐름이 이어집니다.
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
